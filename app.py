@@ -55,23 +55,23 @@ mtrans = st.selectbox(
 if st.button("🔍 Prever nível de obesidade"):
 
     input_data = pd.DataFrame([{
-        "Gender": gender,
-        "Age": age,
-        "Height": height,
-        "Weight": weight,
-        "family_history_with_overweight": family_history,
-        "FAVC": favc,
-        "FCVC": fcvc,
-        "NCP": ncp,
-        "CAEC": caec,
-        "SMOKE": smoke,
-        "CH2O": ch2o,
-        "SCC": scc,
-        "FAF": faf,
-        "TUE": tue,
-        "CALC": calc,
-        "MTRANS": mtrans
-    }])
+    "Gender": gender,
+    "Age": age,
+    "Height": height,
+    "Weight": weight,
+    "family_history": family_history,  # 👈 ESTE NOME
+    "FAVC": favc,
+    "FCVC": fcvc,
+    "NCP": ncp,
+    "CAEC": caec,
+    "SMOKE": smoke,
+    "CH2O": ch2o,
+    "SCC": scc,
+    "FAF": faf,
+    "TUE": tue,
+    "CALC": calc,
+    "MTRANS": mtrans
+}])
 
     prediction = model.predict(input_data)
 
